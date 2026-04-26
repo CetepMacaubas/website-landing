@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0b5e3b" />
+    <title>Blog dos Alunos — CETEP</title>
+    <meta
+      name="description"
+      content="Blog dos alunos do CETEP: notícias, relatos de projetos, eventos e conteúdos produzidos na escola."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+
+  <body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+    <header class="site-header" role="banner">
+      <div class="topbar" aria-hidden="true"></div>
+      <div class="container header-inner">
+        <a class="brand" href="./index.html#inicio" aria-label="Voltar para a página inicial">
+          <span class="brand-mark" aria-hidden="true">C</span>
+          <span class="brand-text">
+            <span class="brand-title">CETEP</span>
+            <span class="brand-subtitle">Blog dos alunos • Macaúbas (BA)</span>
+          </span>
+        </a>
+
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-label="Abrir menu"
+          aria-controls="menu"
+          aria-expanded="false"
+          data-nav-toggle
+        >
+          <span class="nav-toggle-lines" aria-hidden="true"></span>
+        </button>
+
+        <nav class="site-nav" aria-label="Navegação principal">
+          <ul class="nav-list" id="menu" data-nav-menu>
+            <li><a class="nav-link" href="./index.html#sobre">Sobre</a></li>
+            <li><a class="nav-link" href="./projetos.html">Projetos</a></li>
+            <li><a class="nav-link" href="./podcast.html">Podcast</a></li>
+            <li><a class="nav-link" href="./cep.html">Consulta CEP</a></li>
+            <li class="nav-cta">
+              <a class="btn btn-primary" href="./index.html#contato">Contato</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="conteudo" class="site-main" role="main">
+      <section class="section">
+        <div class="container">
+          <header class="section-header">
+            <h1 class="section-title">📝 Blog dos alunos</h1>
+            <p class="section-subtitle">
+              Publicações curtas e objetivas, com linguagem acessível: notícias,
+              relatos de projetos, eventos e conteúdos produzidos no CETEP.
+            </p>
+          </header>
+
+          <div class="banner reveal" role="note" aria-label="Blog dos alunos">
+            <div class="banner-media" aria-hidden="true">
+              <img
+                src="./assets/SaveClip.App_670492943_17906994072403391_1013295851804318281_n.jpg"
+                alt=""
+                loading="lazy"
+              />
+            </div>
+            <div class="banner-content">
+              <h2 class="banner-title">O que você encontra aqui</h2>
+              <p class="banner-text">
+                Textos sobre a vida escolar, projetos e ações para a comunidade.
+                Este blog é um espaço de aprendizagem: planejar, escrever,
+                revisar e publicar.
+              </p>
+              <a class="btn btn-secondary" href="./projetos.html">Ver projetos</a>
+            </div>
+          </div>
+
+          <div class="grid cards-3" style="margin-top: 1.2rem">
+            <article class="card card-elevated reveal">
+              <h2 class="card-title">Educação técnica: por onde começar?</h2>
+              <p class="card-text">
+                Entenda como a formação técnica ajuda a desenvolver competências
+                práticas e amplia oportunidades de estudo e trabalho.
+              </p>
+              <p class="footnote">Publicação exemplo • Atualize com conteúdo real</p>
+            </article>
+
+            <article class="card reveal">
+              <h2 class="card-title">Projeto em foco: Podcast do CETEP</h2>
+              <p class="card-text">
+                Como os alunos organizam pautas, gravam entrevistas e editam
+                episódios. Uma prática que fortalece comunicação e trabalho em
+                equipe.
+              </p>
+              <div class="cta-actions">
+                <a class="btn btn-secondary" href="./podcast.html">Ouvir</a>
+                <a class="btn btn-ghost" href="./index.html#contato">Participar</a>
+              </div>
+              <p class="footnote">Publicação exemplo • Atualize com conteúdo real</p>
+            </article>
+
+            <article class="card reveal">
+              <h2 class="card-title">Ferramenta de CEP: tecnologia na prática</h2>
+              <p class="card-text">
+                Uma atividade simples que ensina validação, consumo de API e
+                retorno acessível de informações para o usuário.
+              </p>
+              <div class="cta-actions">
+                <a class="btn btn-secondary" href="./cep.html">Testar</a>
+                <a class="btn btn-ghost" href="./projetos.html">Ver projetos</a>
+              </div>
+              <p class="footnote">Publicação exemplo • Atualize com conteúdo real</p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+      <div class="container footer-inner">
+        <div class="footer-brand">
+          <div class="brand-mark" aria-hidden="true">C</div>
+          <div>
+            <strong>CETEP</strong>
+            <p class="muted">Blog dos alunos</p>
+          </div>
+        </div>
+        <nav class="footer-nav" aria-label="Links do rodapé">
+          <a href="./index.html#inicio">Site CETEP</a>
+          <a href="./projetos.html">Projetos</a>
+          <a href="./podcast.html">Podcast</a>
+        </nav>
+        <p class="footer-copy">
+          © <span data-year></span> CETEP. Página produzida para fins educacionais.
+        </p>
+      </div>
+    </footer>
+
+    <button class="back-to-top" type="button" aria-label="Voltar ao topo" data-back-to-top>
+      <span aria-hidden="true">↑</span>
+    </button>
+
+    <script src="./script.js" defer></script>
+  </body>
+</html>
+

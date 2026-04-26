@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0b5e3b" />
+    <title>Consulta de CEP — Projeto dos Alunos (CETEP)</title>
+    <meta
+      name="description"
+      content="Ferramenta de consulta de CEP desenvolvida pelos alunos do CETEP, com integração à API ViaCEP."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+
+  <body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+    <header class="site-header" role="banner">
+      <div class="topbar" aria-hidden="true"></div>
+      <div class="container header-inner">
+        <a class="brand" href="./projetos.html" aria-label="Voltar para Projetos dos Alunos">
+          <span class="brand-mark" aria-hidden="true">C</span>
+          <span class="brand-text">
+            <span class="brand-title">CETEP</span>
+            <span class="brand-subtitle">Projeto dos alunos • Consulta de CEP</span>
+          </span>
+        </a>
+
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-label="Abrir menu"
+          aria-controls="menu"
+          aria-expanded="false"
+          data-nav-toggle
+        >
+          <span class="nav-toggle-lines" aria-hidden="true"></span>
+        </button>
+
+        <nav class="site-nav" aria-label="Navegação principal">
+          <ul class="nav-list" id="menu" data-nav-menu>
+            <li><a class="nav-link" href="./index.html#inicio">Site CETEP</a></li>
+            <li><a class="nav-link" href="./projetos.html">Projetos</a></li>
+            <li><a class="nav-link" href="./podcast.html">Podcast</a></li>
+            <li class="nav-cta">
+              <a class="btn btn-primary" href="./index.html#contato">Contato</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="conteudo" class="site-main" role="main">
+      <section class="section section-muted">
+        <div class="container">
+          <header class="section-header">
+            <p class="eyebrow">Projeto dos alunos • Tecnologia na prática</p>
+            <h1 class="section-title">Consulta de CEP</h1>
+            <p class="section-subtitle">
+              Ferramenta desenvolvida pelos alunos para praticar integração com
+              API, validação de dados e acessibilidade. A consulta usa a base
+              pública do ViaCEP.
+            </p>
+          </header>
+
+          <div class="contact-grid">
+            <div class="card card-elevated reveal cep-card">
+              <div class="cep-card-head">
+                <div>
+                  <h2 class="card-title">Consultar endereço</h2>
+                  <p class="card-text">
+                    Digite um CEP para consultar logradouro, bairro, cidade e
+                    UF. O resultado aparece abaixo, com retorno claro e direto.
+                  </p>
+                </div>
+                <div class="cep-badge" aria-hidden="true">
+                  <span class="pill">ViaCEP</span>
+                </div>
+              </div>
+
+              <form class="cep-form" data-cep-form>
+                <label class="field">
+                  <span class="label">CEP</span>
+                  <input
+                    name="cep"
+                    inputmode="numeric"
+                    autocomplete="postal-code"
+                    placeholder="Ex.: 46500-000"
+                    aria-describedby="cep-ajuda"
+                    maxlength="9"
+                    required
+                  />
+                </label>
+                <p class="form-hint" id="cep-ajuda">
+                  Consulta automática usando a base pública ViaCEP.
+                </p>
+
+                <div class="form-actions">
+                  <button class="btn btn-secondary" type="submit" data-cep-submit>
+                    Consultar
+                  </button>
+                  <p
+                    class="form-hint"
+                    role="status"
+                    aria-live="polite"
+                    data-cep-status
+                  ></p>
+                </div>
+
+                <div class="cep-result" hidden data-cep-result>
+                  <div class="cep-result-head">
+                    <h3 class="card-title">Resultado</h3>
+                    <a class="link" href="./projetos.html">Ver outros projetos</a>
+                  </div>
+                  <div class="cep-row">
+                    <span class="contact-key">Logradouro</span>
+                    <span class="contact-val" data-cep-logradouro></span>
+                  </div>
+                  <div class="cep-row">
+                    <span class="contact-key">Bairro</span>
+                    <span class="contact-val" data-cep-bairro></span>
+                  </div>
+                  <div class="cep-row">
+                    <span class="contact-key">Cidade/UF</span>
+                    <span class="contact-val" data-cep-localidade></span>
+                  </div>
+                  <div class="cep-actions">
+                    <a class="btn btn-ghost" href="./blog.html">Ler no blog</a>
+                    <a class="btn btn-primary" href="./podcast.html">Ouvir podcast</a>
+                  </div>
+                </div>
+              </form>
+            </div>
+
+            <aside class="stack reveal" aria-label="Sobre este projeto">
+              <div class="card reveal project-note">
+                <h2 class="card-title">O que foi aprendido</h2>
+                <p class="card-text">
+                  Um projeto curto, mas completo: da interface ao consumo de
+                  dados — com foco em acessibilidade e clareza.
+                </p>
+                <ul class="list">
+                  <li>Validação de entrada (CEP com 8 dígitos)</li>
+                  <li>Requisição HTTP e tratamento de erro</li>
+                  <li>Retorno acessível com <code>aria-live</code></li>
+                  <li>Interface responsiva (mobile-first)</li>
+                </ul>
+              </div>
+
+              <div class="card cta-card">
+                <h2 class="card-title">Ver mais projetos</h2>
+                <p class="card-text">
+                  Confira o podcast do CETEP e outras iniciativas estudantis.
+                </p>
+                <div class="cta-actions">
+                  <a class="btn btn-primary" href="./projetos.html">Projetos</a>
+                  <a class="btn btn-ghost" href="./podcast.html">Podcast</a>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+      <div class="container footer-inner">
+        <div class="footer-brand">
+          <div class="brand-mark" aria-hidden="true">C</div>
+          <div>
+            <strong>CETEP</strong>
+            <p class="muted">Projeto dos alunos: Consulta de CEP</p>
+          </div>
+        </div>
+        <nav class="footer-nav" aria-label="Links do rodapé">
+          <a href="./projetos.html">Projetos</a>
+          <a href="./podcast.html">Podcast</a>
+          <a href="./index.html#inicio">Site CETEP</a>
+        </nav>
+        <p class="footer-copy">
+          © <span data-year></span> CETEP. Página produzida para fins educacionais.
+        </p>
+      </div>
+    </footer>
+
+    <button class="back-to-top" type="button" aria-label="Voltar ao topo" data-back-to-top>
+      <span aria-hidden="true">↑</span>
+    </button>
+
+    <script src="./script.js" defer></script>
+  </body>
+</html>
